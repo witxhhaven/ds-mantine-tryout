@@ -1,5 +1,75 @@
 import { createTheme } from "@mantine/core";
 import { themeToVars } from "@mantine/vanilla-extract";
 
-export const theme = createTheme({});
+export const theme = createTheme({
+  fontFamily: 'Poppins, sans-serif',
+  fontSizes: {
+    xs: '11.11px',
+    sm: '13.33px',
+    md: '16px',
+    lg: '19.2px',
+    xl: '23.04px',
+  },
+  headings: {
+    fontFamily: 'Poppins, sans-serif',
+    sizes: {
+      h1: { fontSize: '47.78px' },
+      h2: { fontSize: '39.81px' },
+      h3: { fontSize: '33.18px' },
+      h4: { fontSize: '27.65px' },
+      h5: { fontSize: '23.04px' },
+      h6: { fontSize: '19.2px' },
+    },
+  },
+  colors: {
+    blue: [
+      '#ecf4ff',
+      '#dce4f5',
+      '#b9c7e2',
+      '#94a8d0',
+      '#748dc0',
+      '#5f7cb7',
+      '#5474b4',
+      '#44639f',
+      '#3a5890',
+      '#2c4b80',
+    ],
+    red: [
+      '#ffeaf3',
+      '#fcd4e1',
+      '#f4a7bf',
+      '#ec779c',
+      '#e64f7e',
+      '#e3366c',
+      '#e22862',
+      '#c91a52',
+      '#b41148',
+      '#9f003e',
+    ],
+    green: [
+      '#e8faf1',
+      '#d1f2e1',
+      '#a3e4c4',
+      '#72d5a4',
+      '#4ac889',
+      '#2fbe77',
+      '#1eb96a',
+      '#15a35a',
+      '#0f914f',
+      '#067d42',
+    ],
+    gray: [
+      '#f5f7f9',
+      '#e8ecf0',
+      '#d1d8e0',
+      '#b8c2ce',
+      '#9eabbb',
+      '#8897ab',
+      '#7a8a9f',
+      '#67778d',
+      '#586880',
+      '#485772',
+    ],
+  },
+});
 export const vars = themeToVars(theme);
