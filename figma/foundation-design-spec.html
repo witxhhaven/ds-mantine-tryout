@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            padding: 48px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 64px;
+        }
+
+        .section-header {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 23.04px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            font-size: 16px;
+            color: #8897ab;
+        }
+
+        .subsection {
+            margin-bottom: 48px;
+        }
+
+        .subsection-title {
+            font-size: 19.2px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .type-specimen {
+            margin-bottom: 24px;
+            padding: 16px;
+            border: 1px solid #e8ecf0;
+            border-radius: 8px;
+        }
+
+        .type-label {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .type-name {
+            font-size: 11.11px;
+            color: #8897ab;
+            font-weight: 500;
+        }
+
+        .type-size {
+            font-size: 11.11px;
+            color: #8897ab;
+        }
+
+        /* Typography Styles */
+        .heading-1 {
+            font-size: 47.78px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-2 {
+            font-size: 39.81px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-3 {
+            font-size: 33.18px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-4 {
+            font-size: 27.65px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-5 {
+            font-size: 23.04px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-6 {
+            font-size: 19.2px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .text-xl {
+            font-size: 23.04px;
+        }
+
+        .text-lg {
+            font-size: 19.2px;
+        }
+
+        .text-md {
+            font-size: 16px;
+        }
+
+        .text-sm {
+            font-size: 13.33px;
+        }
+
+        .text-xs {
+            font-size: 11.11px;
+        }
+
+        /* Font Weights */
+        .weight-100 { font-weight: 100; }
+        .weight-200 { font-weight: 200; }
+        .weight-300 { font-weight: 300; }
+        .weight-400 { font-weight: 400; }
+        .weight-500 { font-weight: 500; }
+        .weight-600 { font-weight: 600; }
+        .weight-700 { font-weight: 700; }
+        .weight-800 { font-weight: 800; }
+        .weight-900 { font-weight: 900; }
+
+        /* Color Palette Styles */
+        .color-palette {
+            margin-bottom: 32px;
+        }
+
+        .palette-title {
+            font-size: 19.2px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .color-swatch {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .color-box {
+            width: 100%;
+            height: 80px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .color-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-hex {
+            font-size: 13.33px;
+            font-weight: 500;
+        }
+
+        .color-var {
+            font-size: 11.11px;
+            color: #8897ab;
+        }
+
+        /* Blue Shades */
+        .blue-0 { background-color: #ecf4ff; }
+        .blue-1 { background-color: #dce4f5; }
+        .blue-2 { background-color: #b9c7e2; }
+        .blue-3 { background-color: #94a8d0; }
+        .blue-4 { background-color: #748dc0; }
+        .blue-5 { background-color: #5f7cb7; }
+        .blue-6 { background-color: #5474b4; }
+        .blue-7 { background-color: #44639f; }
+        .blue-8 { background-color: #3a5890; }
+        .blue-9 { background-color: #2c4b80; }
+
+        /* Red Shades */
+        .red-0 { background-color: #ffeaf3; }
+        .red-1 { background-color: #fcd4e1; }
+        .red-2 { background-color: #f4a7bf; }
+        .red-3 { background-color: #ec779c; }
+        .red-4 { background-color: #e64f7e; }
+        .red-5 { background-color: #e3366c; }
+        .red-6 { background-color: #e22862; }
+        .red-7 { background-color: #c91a52; }
+        .red-8 { background-color: #b41148; }
+        .red-9 { background-color: #9f003e; }
+
+        /* Green Shades */
+        .green-0 { background-color: #e8faf1; }
+        .green-1 { background-color: #d1f2e1; }
+        .green-2 { background-color: #a3e4c4; }
+        .green-3 { background-color: #72d5a4; }
+        .green-4 { background-color: #4ac889; }
+        .green-5 { background-color: #2fbe77; }
+        .green-6 { background-color: #1eb96a; }
+        .green-7 { background-color: #15a35a; }
+        .green-8 { background-color: #0f914f; }
+        .green-9 { background-color: #067d42; }
+
+        /* Gray Shades */
+        .gray-0 { background-color: #f5f7f9; }
+        .gray-1 { background-color: #e8ecf0; }
+        .gray-2 { background-color: #d1d8e0; }
+        .gray-3 { background-color: #b8c2ce; }
+        .gray-4 { background-color: #9eabbb; }
+        .gray-5 { background-color: #8897ab; }
+        .gray-6 { background-color: #7a8a9f; }
+        .gray-7 { background-color: #67778d; }
+        .gray-8 { background-color: #586880; }
+        .gray-9 { background-color: #485772; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Typography Section -->
+        <div class="section">
+            <div class="section-header">
+                <h1 class="section-title">Typography System</h1>
+                <p class="section-description">Type scale using 1.2 ratio with 16px base size</p>
+            </div>
+
+            <!-- Headings -->
+            <div class="subsection">
+                <h2 class="subsection-title">Headings</h2>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h1</span>
+                        <span class="type-size">47.78px</span>
+                    </div>
+                    <h1 class="heading-1">How vexingly quick daft zebras jump</h1>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h2</span>
+                        <span class="type-size">39.81px</span>
+                    </div>
+                    <h2 class="heading-2">How vexingly quick daft zebras jump</h2>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h3</span>
+                        <span class="type-size">33.18px</span>
+                    </div>
+                    <h3 class="heading-3">How vexingly quick daft zebras jump</h3>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h4</span>
+                        <span class="type-size">27.65px</span>
+                    </div>
+                    <h4 class="heading-4">How vexingly quick daft zebras jump</h4>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h5</span>
+                        <span class="type-size">23.04px</span>
+                    </div>
+                    <h5 class="heading-5">How vexingly quick daft zebras jump</h5>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">h6</span>
+                        <span class="type-size">19.2px</span>
+                    </div>
+                    <h6 class="heading-6">How vexingly quick daft zebras jump</h6>
+                </div>
+            </div>
+
+            <!-- Text Sizes -->
+            <div class="subsection">
+                <h2 class="subsection-title">Text Sizes</h2>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">xl</span>
+                        <span class="type-size">23.04px</span>
+                    </div>
+                    <p class="text-xl">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">lg</span>
+                        <span class="type-size">19.2px</span>
+                    </div>
+                    <p class="text-lg">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">md (default)</span>
+                        <span class="type-size">16px</span>
+                    </div>
+                    <p class="text-md">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">sm</span>
+                        <span class="type-size">13.33px</span>
+                    </div>
+                    <p class="text-sm">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">xs</span>
+                        <span class="type-size">11.11px</span>
+                    </div>
+                    <p class="text-xs">How vexingly quick daft zebras jump</p>
+                </div>
+            </div>
+
+            <!-- Font Weights -->
+            <div class="subsection">
+                <h2 class="subsection-title">Font Weights</h2>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Thin (100)</span>
+                    </div>
+                    <p class="text-md weight-100">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">ExtraLight (200)</span>
+                    </div>
+                    <p class="text-md weight-200">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Light (300)</span>
+                    </div>
+                    <p class="text-md weight-300">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Regular (400)</span>
+                    </div>
+                    <p class="text-md weight-400">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Medium (500)</span>
+                    </div>
+                    <p class="text-md weight-500">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">SemiBold (600)</span>
+                    </div>
+                    <p class="text-md weight-600">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Bold (700)</span>
+                    </div>
+                    <p class="text-md weight-700">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">ExtraBold (800)</span>
+                    </div>
+                    <p class="text-md weight-800">How vexingly quick daft zebras jump</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Black (900)</span>
+                    </div>
+                    <p class="text-md weight-900">How vexingly quick daft zebras jump</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette Section -->
+        <div class="section">
+            <div class="section-header">
+                <h1 class="section-title">Color Palette Showcase</h1>
+                <p class="section-description">Custom color palettes with 10 shades each (0-9, lightest to darkest)</p>
+            </div>
+
+            <!-- Blue Palette -->
+            <div class="color-palette">
+                <h2 class="palette-title">Blue</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-box blue-0"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#ECF4FF</span>
+                            <span class="color-var">var(--mantine-color-blue-0)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-1"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#DCE4F5</span>
+                            <span class="color-var">var(--mantine-color-blue-1)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-2"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#B9C7E2</span>
+                            <span class="color-var">var(--mantine-color-blue-2)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-3"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#94A8D0</span>
+                            <span class="color-var">var(--mantine-color-blue-3)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-4"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#748DC0</span>
+                            <span class="color-var">var(--mantine-color-blue-4)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-5"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#5F7CB7</span>
+                            <span class="color-var">var(--mantine-color-blue-5)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-6"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#5474B4</span>
+                            <span class="color-var">var(--mantine-color-blue-6)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-7"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#44639F</span>
+                            <span class="color-var">var(--mantine-color-blue-7)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-8"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#3A5890</span>
+                            <span class="color-var">var(--mantine-color-blue-8)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box blue-9"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#2C4B80</span>
+                            <span class="color-var">var(--mantine-color-blue-9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Palette -->
+            <div class="color-palette">
+                <h2 class="palette-title">Red</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-box red-0"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#FFEAF3</span>
+                            <span class="color-var">var(--mantine-color-red-0)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-1"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#FCD4E1</span>
+                            <span class="color-var">var(--mantine-color-red-1)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-2"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#F4A7BF</span>
+                            <span class="color-var">var(--mantine-color-red-2)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-3"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#EC779C</span>
+                            <span class="color-var">var(--mantine-color-red-3)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-4"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#E64F7E</span>
+                            <span class="color-var">var(--mantine-color-red-4)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-5"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#E3366C</span>
+                            <span class="color-var">var(--mantine-color-red-5)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-6"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#E22862</span>
+                            <span class="color-var">var(--mantine-color-red-6)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-7"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#C91A52</span>
+                            <span class="color-var">var(--mantine-color-red-7)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-8"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#B41148</span>
+                            <span class="color-var">var(--mantine-color-red-8)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box red-9"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#9F003E</span>
+                            <span class="color-var">var(--mantine-color-red-9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Green Palette -->
+            <div class="color-palette">
+                <h2 class="palette-title">Green</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-box green-0"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#E8FAF1</span>
+                            <span class="color-var">var(--mantine-color-green-0)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-1"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#D1F2E1</span>
+                            <span class="color-var">var(--mantine-color-green-1)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-2"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#A3E4C4</span>
+                            <span class="color-var">var(--mantine-color-green-2)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-3"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#72D5A4</span>
+                            <span class="color-var">var(--mantine-color-green-3)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-4"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#4AC889</span>
+                            <span class="color-var">var(--mantine-color-green-4)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-5"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#2FBE77</span>
+                            <span class="color-var">var(--mantine-color-green-5)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-6"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#1EB96A</span>
+                            <span class="color-var">var(--mantine-color-green-6)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-7"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#15A35A</span>
+                            <span class="color-var">var(--mantine-color-green-7)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-8"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#0F914F</span>
+                            <span class="color-var">var(--mantine-color-green-8)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box green-9"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#067D42</span>
+                            <span class="color-var">var(--mantine-color-green-9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gray Palette -->
+            <div class="color-palette">
+                <h2 class="palette-title">Gray</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-box gray-0"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#F5F7F9</span>
+                            <span class="color-var">var(--mantine-color-gray-0)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-1"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#E8ECF0</span>
+                            <span class="color-var">var(--mantine-color-gray-1)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-2"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#D1D8E0</span>
+                            <span class="color-var">var(--mantine-color-gray-2)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-3"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#B8C2CE</span>
+                            <span class="color-var">var(--mantine-color-gray-3)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-4"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#9EABBB</span>
+                            <span class="color-var">var(--mantine-color-gray-4)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-5"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#8897AB</span>
+                            <span class="color-var">var(--mantine-color-gray-5)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-6"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#7A8A9F</span>
+                            <span class="color-var">var(--mantine-color-gray-6)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-7"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#67778D</span>
+                            <span class="color-var">var(--mantine-color-gray-7)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-8"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#586880</span>
+                            <span class="color-var">var(--mantine-color-gray-8)</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box gray-9"></div>
+                        <div class="color-info">
+                            <span class="color-hex">#485772</span>
+                            <span class="color-var">var(--mantine-color-gray-9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
