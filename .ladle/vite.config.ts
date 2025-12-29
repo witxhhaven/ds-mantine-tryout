@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react(), vanillaExtractPlugin()],
   server: {
     watch: {
-      usePolling: false,
+      usePolling: true,
+      interval: 100,
     },
   },
 });

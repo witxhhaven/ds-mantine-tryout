@@ -1,0 +1,8 @@
+.fancyButton {
+  corner-shape: bevel;
+  border-bottom-right-radius: 1rem;
+}
+
+.fancyButton:active {
+  transform: none;
+}

@@ -5,6 +5,10 @@ import { ColorShowcase } from "./Colors";
 import { Typography as TypographyComponent } from "./Typography";
 import "@mantine/core/styles.css";
 
+export default {
+  title: "`01-Foundation`",
+}
+
 export const Typography: Story = () => (
   <MantineProvider theme={theme}>
     <TypographyComponent />
@@ -17,10 +21,12 @@ export const Colors: Story = () => (
   </MantineProvider>
 );
 
-Typography.meta = {
-  title: "01 Foundation/Typography",
-};
 
-Colors.meta = {
-  title: "01 Foundation/Colors",
-};
+
+// Typography.meta = {
+//   title: "01 Foundation/Typography",
+// };
+
+// Colors.meta = {
+//   title: "01 Foundation/Colors",
+// };
