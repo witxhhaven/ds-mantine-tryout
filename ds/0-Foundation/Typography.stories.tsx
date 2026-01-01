@@ -1,8 +1,9 @@
+import type { Story, StoryDefault } from "@ladle/react";
 import { Stack, Title, Text, Box, Group } from "@mantine/core";
 
 const sampleText = "How vexingly quick daft zebras jump";
 
-export function Typography() {
+function Typography() {
   const fontWeights = [
     { value: 100, label: "Thin (100)" },
     { value: 200, label: "ExtraLight (200)" },
@@ -23,7 +24,7 @@ export function Typography() {
           Typography System
         </Text>
         <Text c="dimmed" mb="xl">
-          Type scale using 1.2 ratio with 16px base size
+          Type scale using 1.2 ratio with 18px base size
         </Text>
       </div>
 
@@ -39,7 +40,7 @@ export function Typography() {
                 h1
               </Text>
               <Text size="xs" c="dimmed">
-                47.78px
+                54px
               </Text>
             </Group>
             <Title order={1}>{sampleText}</Title>
@@ -51,7 +52,7 @@ export function Typography() {
                 h2
               </Text>
               <Text size="xs" c="dimmed">
-                39.81px
+                45px
               </Text>
             </Group>
             <Title order={2}>{sampleText}</Title>
@@ -63,7 +64,7 @@ export function Typography() {
                 h3
               </Text>
               <Text size="xs" c="dimmed">
-                33.18px
+                37px
               </Text>
             </Group>
             <Title order={3}>{sampleText}</Title>
@@ -75,7 +76,7 @@ export function Typography() {
                 h4
               </Text>
               <Text size="xs" c="dimmed">
-                27.65px
+                31px
               </Text>
             </Group>
             <Title order={4}>{sampleText}</Title>
@@ -87,7 +88,7 @@ export function Typography() {
                 h5
               </Text>
               <Text size="xs" c="dimmed">
-                23.04px
+                26px
               </Text>
             </Group>
             <Title order={5}>{sampleText}</Title>
@@ -99,7 +100,7 @@ export function Typography() {
                 h6
               </Text>
               <Text size="xs" c="dimmed">
-                19.2px
+                22px
               </Text>
             </Group>
             <Title order={6}>{sampleText}</Title>
@@ -119,7 +120,7 @@ export function Typography() {
                 xl
               </Text>
               <Text size="xs" c="dimmed">
-                23.04px
+                26px
               </Text>
             </Group>
             <Text size="xl">{sampleText}</Text>
@@ -131,7 +132,7 @@ export function Typography() {
                 lg
               </Text>
               <Text size="xs" c="dimmed">
-                19.2px
+                22px
               </Text>
             </Group>
             <Text size="lg">{sampleText}</Text>
@@ -143,7 +144,7 @@ export function Typography() {
                 md (default)
               </Text>
               <Text size="xs" c="dimmed">
-                16px
+                18px
               </Text>
             </Group>
             <Text size="md">{sampleText}</Text>
@@ -155,7 +156,7 @@ export function Typography() {
                 sm
               </Text>
               <Text size="xs" c="dimmed">
-                13.33px
+                15px
               </Text>
             </Group>
             <Text size="sm">{sampleText}</Text>
@@ -167,7 +168,7 @@ export function Typography() {
                 xs
               </Text>
               <Text size="xs" c="dimmed">
-                11.11px
+                13px
               </Text>
             </Group>
             <Text size="xs">{sampleText}</Text>
@@ -198,3 +199,9 @@ export function Typography() {
     </Stack>
   );
 }
+
+export default {
+  title: "`01-Foundation`",
+} satisfies StoryDefault;
+
+export const TypographySystem: Story = () => <Typography />;

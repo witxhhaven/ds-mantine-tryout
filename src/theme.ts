@@ -2,23 +2,23 @@ import { createTheme } from "@mantine/core";
 import { themeToVars } from "@mantine/vanilla-extract";
 
 export const theme = createTheme({
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Figtree, sans-serif',
   fontSizes: {
-    xs: '11.11px',
-    sm: '13.33px',
-    md: '16px',
-    lg: '19.2px',
-    xl: '23.04px',
+    xs: '13px',
+    sm: '15px',
+    md: '18px',
+    lg: '22px',
+    xl: '26px',
   },
   headings: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'Figtree, sans-serif',
     sizes: {
-      h1: { fontSize: '47.78px' },
-      h2: { fontSize: '39.81px' },
-      h3: { fontSize: '33.18px' },
-      h4: { fontSize: '27.65px' },
-      h5: { fontSize: '23.04px' },
-      h6: { fontSize: '19.2px' },
+      h1: { fontSize: '54px' },
+      h2: { fontSize: '45px' },
+      h3: { fontSize: '37px' },
+      h4: { fontSize: '31px' },
+      h5: { fontSize: '26px' },
+      h6: { fontSize: '22px' },
     },
   },
   colors: {

@@ -1,3 +1,4 @@
+import type { Story, StoryDefault } from "@ladle/react";
 import { Stack, Text, Box } from "@mantine/core";
 
 interface ColorSwatchProps {
@@ -66,7 +67,7 @@ function ColorPalette({ name, colorKey, hexCodes }: ColorPaletteProps) {
   );
 }
 
-export function ColorShowcase() {
+function ColorShowcase() {
   const colors = {
     blue: [
       '#ecf4ff',
@@ -136,3 +137,9 @@ export function ColorShowcase() {
     </Stack>
   );
 }
+
+export default {
+  title: "`01-Foundation`",
+} satisfies StoryDefault;
+
+export const ColorPaletteStory: Story = () => <ColorShowcase />;
