@@ -29,7 +29,6 @@ export function MetricCard({
 }: MetricCardProps) {
   return (
     <Card
-      shadow="sm"
       padding="lg"
       radius="md"
       withBorder

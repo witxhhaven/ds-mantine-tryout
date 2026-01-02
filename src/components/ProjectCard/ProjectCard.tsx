@@ -50,7 +50,7 @@ export function ProjectCard({
   const remainingCount = tags.length - 3;
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card padding="lg" radius="md" withBorder>
       <Card.Section inheritPadding py="md">
         <Group justify="space-between" align="flex-start">
           <Box
