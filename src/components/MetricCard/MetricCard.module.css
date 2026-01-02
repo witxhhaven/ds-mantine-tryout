@@ -1,0 +1,54 @@
+.card {
+  background-color: var(--mantine-color-white);
+  border-color: var(--mantine-color-gray-2);
+}
+
+.iconContainer {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconContainer.primary {
+  background-color: var(--mantine-color-blue-0);
+}
+
+.iconContainer.primary .icon {
+  color: var(--mantine-color-blue-6);
+}
+
+.iconContainer.accent {
+  background-color: var(--mantine-color-violet-0);
+}
+
+.iconContainer.accent .icon {
+  color: var(--mantine-color-violet-6);
+}
+
+.iconContainer.success {
+  background-color: var(--mantine-color-green-0);
+}
+
+.iconContainer.success .icon {
+  color: var(--mantine-color-green-6);
+}
+
+.iconContainer.warning {
+  background-color: var(--mantine-color-orange-0);
+}
+
+.iconContainer.warning .icon {
+  color: var(--mantine-color-orange-6);
+}
+
+.label {
+  margin-bottom: 2px;
+}
+
+.value {
+  line-height: 1.2;
+}

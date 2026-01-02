@@ -1,0 +1,158 @@
+.container {
+  padding: 60px 24px;
+  min-height: 600px;
+}
+
+.mainStack {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Group 1: Content | Image */
+.group1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Group 2: Feature Cards | Testimonial */
+.group2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.logoWrapper {
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--mantine-color-dark-9);
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--mantine-color-gray-7);
+  max-width: 90%;
+}
+
+.ctaWrapper {
+  display: inline-flex;
+}
+
+/* Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.featureCard {
+  background-color: white;
+  border: 1px solid var(--mantine-color-gray-3);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.featureCard:hover {
+  border-color: var(--mantine-color-gray-4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--mantine-color-gray-6);
+}
+
+.featureText {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--mantine-color-dark-8);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial */
+.testimonialWrapper {
+  background-color: transparent;
+  padding: 0;
+}
+
+.quote {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--mantine-color-dark-9);
+}
+
+.avatar {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.authorName {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--mantine-color-dark-9);
+}
+
+.authorRole {
+  font-size: 0.875rem;
+  color: var(--mantine-color-gray-6);
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .group1 {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .group2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+}
